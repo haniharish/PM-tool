@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-800 rounded;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded hover:bg-gray-500 dark:hover:bg-gray-500;
+}
+
+/* FullCalendar dark mode overrides */
+.dark .fc {
+  --fc-border-color: theme('colors.gray.700');
+  --fc-button-bg-color: theme('colors.primary.600');
+  --fc-button-border-color: theme('colors.primary.600');
+  --fc-button-hover-bg-color: theme('colors.primary.500');
+  --fc-button-hover-border-color: theme('colors.primary.500');
+  --fc-today-bg-color: theme('colors.primary.900');
+  --fc-page-bg-color: theme('colors.gray.800');
+  --fc-neutral-bg-color: theme('colors.gray.800');
+  --fc-list-event-hover-bg-color: theme('colors.gray.700');
+}
